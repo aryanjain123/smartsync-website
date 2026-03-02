@@ -7,17 +7,17 @@ const testimonials = [
     {
         text: "Working with Smart Sync Services has indeed been a rewarding and fulfilling journey so far. This team proactively engages and helps build a portfolio based on one's goals and investing profile. They work more like partners and genuinely care about client expectations during every market cycle. I would also like to specifically thank Akhilesh for building a great team by embracing honesty and empathy as core values throughout.",
         author: "Yogesh Aigalikar",
-        title: "Regional Sales Director - Global Analytics OEM"
+        title: "Regional Sales Director – Global Analytics OEM"
     },
     {
-        text: "Working with Smart Sync Services has been one of the best financial decisions I've ever made. From the very beginning, they took the time to understand my goals and built a portfolio that truly worked for me. Their timely advice and clear explanations gave me the confidence to stay invested, even in uncertain markets. Thanks to their guidance, my investments have grown steadily beyond expectations. Akhilesh, in particular, has been amazing - always keeping in touch, discussing market moves, and ensuring I make the right calls at the right time.",
+        text: "Working with Smart Sync Services has been one of the best financial decisions I've ever made. From the very beginning, they took the time to understand my goals and built a portfolio that truly worked for me. Their timely advice and clear explanations gave me the confidence to stay invested, even in uncertain markets. Thanks to their guidance, my investments have grown steadily beyond expectations. Akhilesh, in particular, has been amazing—always keeping in touch, discussing market moves, and ensuring I make the right calls at the right time.",
         author: "Ashok Mishra",
-        title: "Global Head - Customer Service, US Data Analytics MNC"
+        title: "Global Head – Customer Service, US Data Analytics MNC"
     },
     {
-        text: "Smart Sync Services has been instrumental in transforming my investment approach. Their deep market knowledge, personalized strategies, and clear communication have given me the confidence to stay focused on my long-term goals. Every recommendation is backed by thorough research and timely market insights, helping me navigate both opportunities and risks with ease. The team's professionalism and dedication, especially their proactive updates and transparent approach, truly sets them apart.",
-        author: "Anonymous Client",
-        title: "Long-term Investor"
+        text: "Smart Sync Services has been instrumental in transforming my investment approach. Their deep market knowledge, personalized strategies, and clear communication have given me the confidence to stay focused on my long-term goals. Every recommendation is backed by thorough research and timely market insights, helping me navigate both opportunities and risks with ease. The team's professionalism and dedication, especially their proactive updates and transparent advice, make them a trusted partner for wealth creation. I wholeheartedly recommend Smart Sync Services to anyone serious about growing their investments with expert guidance.",
+        author: "Yogesh Mishra",
+        title: "Director – Technology Operations, Indian MNC"
     }
 ];
 

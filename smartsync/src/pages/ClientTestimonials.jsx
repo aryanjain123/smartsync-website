@@ -3,29 +3,19 @@ import { motion } from 'framer-motion';
 
 const testimonials = [
     {
-        quote: "Mission SMILE is a well-thought-out platform for investment enthusiasts providing quality curated content. Always look forward to reading their updates, be it on businesses or investment frameworks. The owners put in a lot of effort to constantly come up with interesting topics to talk about. Thanking the team and wishing them future success!",
-        author: "Ashish Kila",
-        descriptor: "Accomplished value investor, Owner Perfect Group and CIO Perfect Research"
+        quote: "Working with Smart Sync Services has indeed been a rewarding and fulfilling journey so far. This team proactively engages and helps build a portfolio based on one's goals and investing profile. They work more like partners and genuinely care about client expectations during every market cycle. I would also like to specifically thank Akhilesh for building a great team by embracing honesty and empathy as core values throughout.",
+        author: "Yogesh Aigalikar",
+        descriptor: "Regional Sales Director – Global Analytics OEM"
     },
     {
-        quote: "The energy, enthusiasm, and commitment displayed by SSS is commendable. They have maintained consistent transparency in handling my investments and have continually engaged with me to ensure we leverage each opportunity in the market. I strongly recommend SSS to all investors – first time or seasoned experts – as this team definitely delivers more than they promise.",
-        author: "Amrita Das",
-        descriptor: "Strategy Manager, Amazon India"
+        quote: "Working with Smart Sync Services has been one of the best financial decisions I've ever made. From the very beginning, they took the time to understand my goals and built a portfolio that truly worked for me. Their timely advice and clear explanations gave me the confidence to stay invested, even in uncertain markets. Thanks to their guidance, my investments have grown steadily beyond expectations. Akhilesh, in particular, has been amazing—always keeping in touch, discussing market moves, and ensuring I make the right calls at the right time.",
+        author: "Ashok Mishra",
+        descriptor: "Global Head – Customer Service, US Data Analytics MNC"
     },
     {
-        quote: "Management of health should be the utmost priority in life and self-medication is not the right thing. We always trust our health management to medical professionals. Wealth management should also be a priority in life, and it cannot be done by self alone. The best practice is to entrust the job of managing your wealth to the best professionals in the field & I am happy that I could find the best professionals with SSS.",
-        author: "Madhu Menon",
-        descriptor: "Director, Anala Outdoors"
-    },
-    {
-        quote: "Smart Sync Services team provides a valuable service for investors looking to up their game via insightful stock research, great seminars, and equally importantly, a growing community of smart investors to interact with. Looking forward to seeing Smart Sync Services reach greater heights.",
-        author: "Rohit Khanna",
-        descriptor: "Investor"
-    },
-    {
-        quote: "I know Akhilesh, since 2015. He warned me that pharma bullishness will wane soon. I didn’t listen to him – consequence – my pharma basket was down down down. He is a pure fundamental investor – dives deep & then advises. What I like most is he is down to earth, friendly, available to help. God Bless him.",
-        author: "Dr. M P Bajaj",
-        descriptor: "Renowned paediatrician in Northeast India"
+        quote: "Smart Sync Services has been instrumental in transforming my investment approach. Their deep market knowledge, personalized strategies, and clear communication have given me the confidence to stay focused on my long-term goals. Every recommendation is backed by thorough research and timely market insights, helping me navigate both opportunities and risks with ease. The team's professionalism and dedication, especially their proactive updates and transparent advice, make them a trusted partner for wealth creation. I wholeheartedly recommend Smart Sync Services to anyone serious about growing their investments with expert guidance.",
+        author: "Yogesh Mishra",
+        descriptor: "Director – Technology Operations, Indian MNC"
     }
 ];
 
