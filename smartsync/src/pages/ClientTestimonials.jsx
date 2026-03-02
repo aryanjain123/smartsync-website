@@ -23,7 +23,7 @@ const testimonials = [
         descriptor: "Investor"
     },
     {
-        quote: "I know Ankit, our AK, since 2015. He warned me that pharma bullishness will wane soon. I didn’t listen to him – consequence – my pharma basket was down down down. He is a pure fundamental investor – dives deep & then advises. What I like most is he is down to earth, friendly, available to help. God Bless him.",
+        quote: "I know Akhilesh, since 2015. He warned me that pharma bullishness will wane soon. I didn’t listen to him – consequence – my pharma basket was down down down. He is a pure fundamental investor – dives deep & then advises. What I like most is he is down to earth, friendly, available to help. God Bless him.",
         author: "Dr. M P Bajaj",
         descriptor: "Renowned paediatrician in Northeast India"
     }

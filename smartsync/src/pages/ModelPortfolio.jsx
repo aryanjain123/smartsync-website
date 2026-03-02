@@ -1,7 +1,41 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X } from 'lucide-react';
 
 const ModelPortfolio = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [formData, setFormData] = useState({ name: '', email: '', inquiryType: 'Inquiring about Model Portfolio', message: '' });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState({ success: null, message: '' });
+
+    const handleInputChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitStatus({ success: null, message: '' });
+
+        try {
+            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/contact';
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+            const data = await response.json();
+            if (response.ok) {
+                setSubmitStatus({ success: true, message: data.message || 'Thank you. We will contact you soon to schedule the call.' });
+                setFormData({ name: '', email: '', inquiryType: 'Inquiring about Model Portfolio', message: '' });
+                setTimeout(() => setIsModalOpen(false), 3000);
+            } else {
+                setSubmitStatus({ success: false, message: data.message || 'Failed to send inquiry.' });
+            }
+        } catch (error) {
+            setSubmitStatus({ success: false, message: 'Network error. Please try again later.' });
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
     return (
         <main className="page-wrapper pt-32">
             <section className="section">
@@ -13,9 +47,16 @@ const ModelPortfolio = () => {
                         transition={{ duration: 0.6 }}
                     >
                         <h1 className="hero-title" style={{ fontSize: 'clamp(2.5rem, 4vw, 3.5rem)' }}>Stock <span className="text-accent">SIP</span> Portfolio Advisory</h1>
-                        <p className="hero-subtitle mb-0" style={{ maxWidth: '800px' }}>
+                        <p className="hero-subtitle mb-0" style={{ maxWidth: '800px', marginBottom: '2rem' }}>
                             Build your wealth one SIP at a time. Designed to leverage rupee-cost averaging while generating above-average returns with downside protection.
                         </p>
+                        <button
+                            className="btn-primary"
+                            style={{ marginTop: '2rem' }}
+                            onClick={() => setIsModalOpen(true)}
+                        >
+                            Schedule a Call
+                        </button>
                     </motion.div>
 
                     <div style={{ marginTop: '4rem', maxWidth: '800px', margin: '4rem auto 0 auto' }}>
@@ -99,6 +140,46 @@ const ModelPortfolio = () => {
                     </div>
                 </div>
             </section>
+
+            <AnimatePresence>
+                {isModalOpen && (
+                    <div style={{ position: 'fixed', inset: 0, zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' }}>
+                        <motion.div
+                            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+                            style={{ position: 'absolute', inset: 0, background: 'rgba(26,26,26,0.5)', backdropFilter: 'blur(4px)' }}
+                            onClick={() => setIsModalOpen(false)}
+                        />
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                            transition={{ duration: 0.3 }}
+                            style={{ position: 'relative', background: 'var(--color-bg-base)', padding: '2.5rem', width: '100%', maxWidth: '500px', border: '1px solid rgba(26,26,26,0.1)', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}
+                        >
+                            <button onClick={() => setIsModalOpen(false)} style={{ position: 'absolute', top: '1rem', right: '1rem', color: 'var(--color-text-secondary)' }}>
+                                <X size={24} />
+                            </button>
+                            <h2 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', fontWeight: 600 }}>Schedule a Call</h2>
+                            <p style={{ color: 'var(--color-text-secondary)', marginBottom: '1.5rem', fontSize: '0.95rem' }}>Drop your details and we'll connect with you to discuss your portfolio.</p>
+
+                            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                                {submitStatus.success !== null && (
+                                    <div style={{ padding: '0.75rem', background: submitStatus.success ? 'rgba(76, 175, 80, 0.1)' : 'rgba(244, 67, 54, 0.1)', color: submitStatus.success ? '#2e7d32' : '#d32f2f', border: `1px solid ${submitStatus.success ? 'rgba(76, 175, 80, 0.3)' : 'rgba(244, 67, 54, 0.3)'}`, borderRadius: '4px', fontSize: '0.9rem' }}>
+                                        {submitStatus.message}
+                                    </div>
+                                )}
+                                <input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="Full Name" required style={{ padding: '0.875rem', border: '1px solid rgba(26,26,26,0.2)', background: 'transparent', font: 'inherit', outline: 'none' }} />
+                                <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="Email Address" required style={{ padding: '0.875rem', border: '1px solid rgba(26,26,26,0.2)', background: 'transparent', font: 'inherit', outline: 'none' }} />
+                                <input type="hidden" name="inquiryType" value="Inquiring about Model Portfolio" />
+                                <textarea name="message" value={formData.message} onChange={handleInputChange} placeholder="Additional details (Optional)" rows="3" style={{ padding: '0.875rem', border: '1px solid rgba(26,26,26,0.2)', background: 'transparent', font: 'inherit', outline: 'none', resize: 'vertical' }}></textarea>
+                                <button type="submit" className="btn-primary" disabled={isSubmitting} style={{ width: '100%', justifyContent: 'center', opacity: isSubmitting ? 0.7 : 1 }}>
+                                    {isSubmitting ? 'Submitting...' : 'Request Call'}
+                                </button>
+                            </form>
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
         </main>
     );
 };

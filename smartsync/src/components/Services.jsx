@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Briefcase, TrendingUp, BookOpen, ArrowRight } from 'lucide-react';
 import './Services.css';
 
@@ -9,21 +10,27 @@ const servicesData = [
         icon: <Briefcase size={32} />,
         title: "Stock SIP Portfolio Advisory",
         description: "Over 207 Clients Served, since August 2020. Advised Asset Value of over Rs. 72 crores.",
-        link: "Know More"
+        link: "Know More",
+        isExternal: false,
+        path: "/model-portfolio"
     },
     {
         id: 2,
         icon: <TrendingUp size={32} />,
         title: "Small-cap & Micro-cap Advisory",
         description: "Over 130 Clients since August 2023, Focussed on Fundamental Based Long-Term Investing.",
-        link: "Try for Free"
+        link: "Try for Free",
+        isExternal: false,
+        path: "/stock-advisory-services"
     },
     {
         id: 3,
         icon: <BookOpen size={32} />,
         title: "MissioN S.M.I.L.E",
         description: "150+ Hours of Engaging Video Content, Keenly Used by Nearly 7000 New and Seasoned Investors.",
-        link: "Start Learning"
+        link: "Start Learning",
+        isExternal: true,
+        path: "https://missionsmile.smartsyncservices.com/learn"
     }
 ];
 
@@ -73,10 +80,17 @@ const Services = () => {
                             </div>
                             <h3 className="service-title">{service.title}</h3>
                             <p className="service-desc">{service.description}</p>
-                            <a href="#" className="service-link">
-                                {service.link}
-                                <ArrowRight size={16} />
-                            </a>
+                            {service.isExternal ? (
+                                <a href={service.path} target="_blank" rel="noopener noreferrer" className="service-link">
+                                    {service.link}
+                                    <ArrowRight size={16} />
+                                </a>
+                            ) : (
+                                <Link to={service.path} className="service-link">
+                                    {service.link}
+                                    <ArrowRight size={16} />
+                                </Link>
+                            )}
                         </motion.div>
                     ))}
                 </motion.div>

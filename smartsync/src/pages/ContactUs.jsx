@@ -76,7 +76,7 @@ const ContactUs = () => {
 
                             <div style={{ marginBottom: '1.5rem' }}>
                                 <strong style={{ display: 'block', marginBottom: '0.25rem', fontFamily: 'var(--font-body)', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Email</strong>
-                                <a href="mailto:info@smartsyncservices.com" style={{ fontSize: '1.1rem', color: 'var(--color-accent-primary)', fontWeight: 500 }}>info@smartsyncservices.com</a>
+                                <a href="mailto:akhilesh.p@smartsyncservices.com" style={{ fontSize: '1.1rem', color: 'var(--color-accent-primary)', fontWeight: 500 }}>akhilesh.p@smartsyncservices.com</a>
                             </div>
 
                             <div style={{ marginBottom: '1.5rem' }}>

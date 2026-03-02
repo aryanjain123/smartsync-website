@@ -41,7 +41,7 @@ const Footer = () => {
                         <Link to="/investor-charter" className="footer-link">Investor Charter</Link>
                         <Link to="/monthly-disclosures" className="footer-link">Monthly Disclosures</Link>
                         <Link to="/complaint-redressal" className="footer-link">Complaint Redressal & SCORES</Link>
-                        <a href="mailto:ankit.k@smartsyncservices.com" className="footer-link highlight">ankit.k@smartsyncservices.com</a>
+                        <a href="mailto:akhilesh.p@smartsyncservices.com" className="footer-link highlight">akhilesh.p@smartsyncservices.com</a>
                     </div>
 
                 </div>

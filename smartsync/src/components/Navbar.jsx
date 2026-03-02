@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, ArrowUpRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -30,7 +31,7 @@ const Navbar = () => {
             <span className="nav-link">Advisory Services <ChevronDown size={14} className="dropdown-icon" /></span>
             <div className="dropdown-menu">
               <Link to="/model-portfolio" className="dropdown-link">Model Portfolio</Link>
-              <Link to="/stock-advisory" className="dropdown-link">Stock Advisory Services</Link>
+              <Link to="/stock-advisory-services" className="dropdown-link">Stock Advisory Services</Link>
             </div>
           </div>
 
@@ -62,42 +63,60 @@ const Navbar = () => {
           className="mobile-menu-btn"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          <AnimatePresence mode="wait">
+            {mobileMenuOpen ? (
+              <motion.div key="close" initial={{ opacity: 0, rotate: -90 }} animate={{ opacity: 1, rotate: 0 }} exit={{ opacity: 0, rotate: 90 }} transition={{ duration: 0.2 }}>
+                <X size={24} />
+              </motion.div>
+            ) : (
+              <motion.div key="menu" initial={{ opacity: 0, rotate: 90 }} animate={{ opacity: 1, rotate: 0 }} exit={{ opacity: 0, rotate: -90 }} transition={{ duration: 0.2 }}>
+                <Menu size={24} />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </button>
       </div>
 
-      {mobileMenuOpen && (
-        <div className="mobile-nav">
-          <div className="mobile-nav-content">
-            <Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            className="mobile-nav"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+            <div className="mobile-nav-content">
+              <Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
 
-            <div className="mobile-nav-group">
-              <span className="mobile-nav-title">Advisory Services</span>
-              <Link to="/model-portfolio" onClick={() => setMobileMenuOpen(false)}>Model Portfolio</Link>
-              <Link to="/stock-advisory" onClick={() => setMobileMenuOpen(false)}>Stock Advisory Services</Link>
+              <div className="mobile-nav-group">
+                <span className="mobile-nav-title">Advisory Services</span>
+                <Link to="/model-portfolio" onClick={() => setMobileMenuOpen(false)}>Model Portfolio</Link>
+                <Link to="/stock-advisory-services" onClick={() => setMobileMenuOpen(false)}>Stock Advisory Services</Link>
+              </div>
+
+              <a href="https://missionsmile.smartsyncservices.com/learn" target="_blank" rel="noopener noreferrer" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>MissioN S.M.I.L.E</a>
+              <Link to="/blog" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+
+              <div className="mobile-nav-group">
+                <span className="mobile-nav-title">About</span>
+                <Link to="/about-us" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
+                <Link to="/our-team" onClick={() => setMobileMenuOpen(false)}>Our Team</Link>
+                <Link to="/client-testimonials" onClick={() => setMobileMenuOpen(false)}>Client Testimonials</Link>
+              </div>
+
+              <div className="mobile-nav-group">
+                <span className="mobile-nav-title">SEBI Compliance</span>
+                <Link to="/investor-charter" onClick={() => setMobileMenuOpen(false)}>Investor Charter</Link>
+                <Link to="/monthly-disclosures" onClick={() => setMobileMenuOpen(false)}>Monthly Disclosures</Link>
+                <Link to="/complaint-redressal" onClick={() => setMobileMenuOpen(false)}>Complaint Redressal</Link>
+              </div>
+
+              <Link to="/contact-us" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
             </div>
-
-            <a href="https://missionsmile.smartsyncservices.com/learn" target="_blank" rel="noopener noreferrer" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>MissioN S.M.I.L.E</a>
-            <Link to="/blog" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-
-            <div className="mobile-nav-group">
-              <span className="mobile-nav-title">About</span>
-              <Link to="/about-us" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
-              <Link to="/our-team" onClick={() => setMobileMenuOpen(false)}>Our Team</Link>
-              <Link to="/client-testimonials" onClick={() => setMobileMenuOpen(false)}>Client Testimonials</Link>
-            </div>
-
-            <div className="mobile-nav-group">
-              <span className="mobile-nav-title">SEBI Compliance</span>
-              <Link to="/investor-charter" onClick={() => setMobileMenuOpen(false)}>Investor Charter</Link>
-              <Link to="/monthly-disclosures" onClick={() => setMobileMenuOpen(false)}>Monthly Disclosures</Link>
-              <Link to="/complaint-redressal" onClick={() => setMobileMenuOpen(false)}>Complaint Redressal</Link>
-            </div>
-
-            <Link to="/contact-us" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };
