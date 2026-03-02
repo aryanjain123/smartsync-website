@@ -68,11 +68,34 @@ const Navbar = () => {
 
       {mobileMenuOpen && (
         <div className="mobile-nav">
-          <Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-          <Link to="/about-us" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
-          <Link to="/model-portfolio" onClick={() => setMobileMenuOpen(false)}>Services</Link>
-          <Link to="/blog" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-          <Link to="/contact-us" onClick={() => setMobileMenuOpen(false)} className="nav-link">Contact Us</Link>
+          <div className="mobile-nav-content">
+            <Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+
+            <div className="mobile-nav-group">
+              <span className="mobile-nav-title">Advisory Services</span>
+              <Link to="/model-portfolio" onClick={() => setMobileMenuOpen(false)}>Model Portfolio</Link>
+              <Link to="/stock-advisory" onClick={() => setMobileMenuOpen(false)}>Stock Advisory Services</Link>
+            </div>
+
+            <a href="https://missionsmile.smartsyncservices.com/learn" target="_blank" rel="noopener noreferrer" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>MissioN S.M.I.L.E</a>
+            <Link to="/blog" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+
+            <div className="mobile-nav-group">
+              <span className="mobile-nav-title">About</span>
+              <Link to="/about-us" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
+              <Link to="/our-team" onClick={() => setMobileMenuOpen(false)}>Our Team</Link>
+              <Link to="/client-testimonials" onClick={() => setMobileMenuOpen(false)}>Client Testimonials</Link>
+            </div>
+
+            <div className="mobile-nav-group">
+              <span className="mobile-nav-title">SEBI Compliance</span>
+              <Link to="/investor-charter" onClick={() => setMobileMenuOpen(false)}>Investor Charter</Link>
+              <Link to="/monthly-disclosures" onClick={() => setMobileMenuOpen(false)}>Monthly Disclosures</Link>
+              <Link to="/complaint-redressal" onClick={() => setMobileMenuOpen(false)}>Complaint Redressal</Link>
+            </div>
+
+            <Link to="/contact-us" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
+          </div>
         </div>
       )}
     </header>
