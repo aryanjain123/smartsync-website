@@ -14,6 +14,7 @@ import ComplaintRedressal from './pages/ComplaintRedressal';
 import MonthlyDisclosures from './pages/MonthlyDisclosures';
 import ClientTestimonials from './pages/ClientTestimonials';
 import Blog from './pages/Blog';
+import NotFound from './pages/NotFound';
 import './App.css';
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <Route path="/monthly-disclosures" element={<MonthlyDisclosures />} />
         <Route path="/complaint-redressal" element={<ComplaintRedressal />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </Router>
