@@ -24,6 +24,8 @@
     align-items: center;
     max-width: var(--container-width);
     margin: 0 auto;
+    position: relative;
+    z-index: 101;
 }
 
 .logo-text {

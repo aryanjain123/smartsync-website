@@ -135,3 +135,9 @@ button {
   background: var(--color-accent-secondary);
   color: #fff;
 }
+
+/* Utilities */
+.pt-32 {
+  padding-top: 140px;
+  /* Clears the fixed navbar height */
+}

@@ -12,37 +12,39 @@
     position: absolute;
     inset: -50%;
     z-index: 0;
-    opacity: 0.25;
+    opacity: 0.55;
+    /* Increased from 0.25 to make it highly visible */
     background:
-        radial-gradient(circle at 50% 50%, rgba(28, 53, 45, 0.6), transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(158, 124, 80, 0.5), transparent 40%),
-        radial-gradient(circle at 20% 80%, rgba(28, 53, 45, 0.4), transparent 40%),
-        repeating-linear-gradient(45deg, rgba(28, 53, 45, 0.1) 0px, rgba(28, 53, 45, 0.1) 2px, transparent 2px, transparent 20px),
-        repeating-linear-gradient(-45deg, rgba(158, 124, 80, 0.1) 0px, rgba(158, 124, 80, 0.1) 2px, transparent 2px, transparent 20px);
-    animation: slow-mesh 20s ease-in-out infinite alternate;
+        radial-gradient(circle at 50% 50%, rgba(28, 53, 45, 0.7), transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(158, 124, 80, 0.6), transparent 40%),
+        radial-gradient(circle at 20% 80%, rgba(28, 53, 45, 0.5), transparent 40%),
+        repeating-linear-gradient(45deg, rgba(28, 53, 45, 0.15) 0px, rgba(28, 53, 45, 0.15) 2px, transparent 2px, transparent 20px),
+        repeating-linear-gradient(-45deg, rgba(158, 124, 80, 0.15) 0px, rgba(158, 124, 80, 0.15) 2px, transparent 2px, transparent 20px);
+    animation: slow-mesh 10s ease-in-out infinite alternate;
+    /* Doubled speed from 20s to 10s */
     pointer-events: none;
     mix-blend-mode: multiply;
 }
 
 @keyframes slow-mesh {
     0% {
-        transform: scale(1) translate(0, 0) rotate(0deg);
-        opacity: 0.15;
-    }
-
-    33% {
-        transform: scale(1.15) translate(6%, 6%) rotate(3deg);
-        opacity: 0.3;
-    }
-
-    66% {
-        transform: scale(0.85) translate(-6%, 8%) rotate(-3deg);
+        transform: scale(0.9) translate(0, 0) rotate(0deg);
         opacity: 0.4;
     }
 
+    33% {
+        transform: scale(1.2) translate(8%, 8%) rotate(5deg);
+        opacity: 0.7;
+    }
+
+    66% {
+        transform: scale(0.85) translate(-8%, 10%) rotate(-5deg);
+        opacity: 0.8;
+    }
+
     100% {
-        transform: scale(1.1) translate(4%, -6%) rotate(2deg);
-        opacity: 0.25;
+        transform: scale(1.15) translate(6%, -8%) rotate(3deg);
+        opacity: 0.5;
     }
 }
 
