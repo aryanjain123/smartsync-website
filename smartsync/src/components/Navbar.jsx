@@ -1,0 +1,82 @@
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, ChevronDown, ArrowUpRight } from 'lucide-react';
+import './Navbar.css';
+
+const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    // Force scroll to top on route change
+    window.scrollTo(0, 0);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [location.pathname]);
+
+  return (
+    <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <div className="nav-container">
+        <Link to="/" className="logo">
+          <span className="logo-text">SmartSync</span>
+        </Link>
+
+        <nav className="desktop-nav">
+          <div className="nav-item has-dropdown">
+            <span className="nav-link">Advisory Services <ChevronDown size={14} className="dropdown-icon" /></span>
+            <div className="dropdown-menu">
+              <Link to="/model-portfolio" className="dropdown-link">Model Portfolio</Link>
+              <Link to="/stock-advisory" className="dropdown-link">Stock Advisory Services</Link>
+            </div>
+          </div>
+
+          <a href="https://missionsmile.smartsyncservices.com/learn" target="_blank" rel="noopener noreferrer" className="nav-link">MissioN S.M.I.L.E</a>
+          <Link to="/blog" className="nav-link">Blog</Link>
+
+          <div className="nav-item has-dropdown">
+            <span className="nav-link">About <ChevronDown size={14} className="dropdown-icon" /></span>
+            <div className="dropdown-menu">
+              <Link to="/about-us" className="dropdown-link">About Us</Link>
+              <Link to="/our-team" className="dropdown-link">Our Team</Link>
+              <Link to="/client-testimonials" className="dropdown-link">Client Testimonials</Link>
+            </div>
+          </div>
+
+          <div className="nav-item has-dropdown">
+            <span className="nav-link">SEBI Compliance <ChevronDown size={14} className="dropdown-icon" /></span>
+            <div className="dropdown-menu">
+              <Link to="/investor-charter" className="dropdown-link">Investor Charter</Link>
+              <Link to="/monthly-disclosures" className="dropdown-link">Monthly Disclosures</Link>
+              <Link to="/complaint-redressal" className="dropdown-link">Complaint Redressal & SCORES</Link>
+            </div>
+          </div>
+
+          <Link to="/contact-us" className="nav-link">Contact Us</Link>
+        </nav>
+
+        <button
+          className="mobile-menu-btn"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {mobileMenuOpen && (
+        <div className="mobile-nav">
+          <Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+          <Link to="/about-us" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
+          <Link to="/model-portfolio" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+          <Link to="/blog" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+          <Link to="/contact-us" onClick={() => setMobileMenuOpen(false)} className="nav-link">Contact Us</Link>
+        </div>
+      )}
+    </header>
+  );
+};
+
+export default Navbar;

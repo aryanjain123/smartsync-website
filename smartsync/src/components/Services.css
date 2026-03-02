@@ -1,0 +1,119 @@
+.services {
+    background-color: var(--color-bg-surface);
+    border-top: 1px solid rgba(26, 26, 26, 0.1);
+}
+
+.section-header {
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.section-header .section-title {
+    max-width: 500px;
+}
+
+.section-header .section-subtitle {
+    text-align: right;
+    max-width: 400px;
+    margin: 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.service-card {
+    background: var(--color-bg-base);
+    border: 1px solid rgba(26, 26, 26, 0.1);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease;
+}
+
+.service-card:hover {
+    background: var(--color-accent-primary);
+    color: #fff;
+    transform: translateY(-4px);
+}
+
+.service-icon-wrapper {
+    color: var(--color-accent-primary);
+    margin-bottom: 2.5rem;
+    transition: color 0.4s ease;
+}
+
+.service-card:hover .service-icon-wrapper {
+    color: var(--color-accent-secondary);
+}
+
+.service-title {
+    font-family: var(--font-display);
+    font-size: 1.85rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-primary);
+    transition: color 0.4s ease;
+    font-weight: 600;
+}
+
+.service-card:hover .service-title {
+    color: #fff;
+}
+
+.service-desc {
+    color: var(--color-text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    flex-grow: 1;
+    transition: color 0.4s ease;
+    font-weight: 500;
+}
+
+.service-card:hover .service-desc {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: gap 0.3s ease, color 0.4s ease;
+}
+
+.service-card:hover .service-link {
+    color: #fff;
+    gap: 0.75rem;
+}
+
+@media (max-width: 1024px) {
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .section-header .section-subtitle {
+        text-align: left;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}

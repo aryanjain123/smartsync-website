@@ -1,0 +1,85 @@
+.milestones {
+    background-color: var(--color-bg-base);
+    border-top: 1px solid rgba(26, 26, 26, 0.1);
+    border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+    padding: 8rem 0;
+}
+
+.milestones-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.milestones-content .section-title {
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+    margin-bottom: 1.5rem;
+}
+
+.milestones-content .section-subtitle {
+    color: var(--color-text-secondary);
+    font-size: 1.125rem;
+    margin: 0;
+    line-height: 1.7;
+}
+
+.milestones-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.milestone-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.ms-val {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 4vw, 4.5rem);
+    font-weight: 400;
+    color: var(--color-text-primary);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.ms-unit {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: var(--color-accent-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.ms-label {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    .milestones-layout {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .milestones-content {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .milestones-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .milestone-item {
+        border-left: 1px solid rgba(26, 26, 26, 0.1);
+        padding-left: 1.5rem;
+    }
+}

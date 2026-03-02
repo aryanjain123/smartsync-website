@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Albert+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Refined Editorial Palette */
+  --color-bg-base: #F7F5F0;
+  /* Warm off-white / Alabaster */
+  --color-bg-surface: #FFFFFF;
+  --color-bg-surface-elevated: #EFECE5;
+
+  --color-text-primary: #1A1A1A;
+  /* Deep Charcoal */
+  --color-text-secondary: #4A4A4A;
+  --color-text-muted: #7A7A7A;
+
+  --color-accent-primary: #1C352D;
+  /* Deep Forest/Racing Green */
+  --color-accent-secondary: #9E7C50;
+  /* Muted Gold/Bronze */
+
+  /* Typography */
+  --font-display: 'Newsreader', serif;
+  --font-body: 'Albert Sans', sans-serif;
+
+  /* Layout & Spacing */
+  --spacing-section: clamp(4rem, 8vw, 8rem);
+  --spacing-element: clamp(1.5rem, 3vw, 3rem);
+  --container-width: 1200px;
+
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: var(--color-bg-base);
+  /* Added a subtle noise texture for that editorial paper feel */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* Typography Base Elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+}
+
+h1 {
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+}
+
+h2 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+h3 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+p {
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  /* Darker for better contrast with bold */
+  font-size: clamp(1.05rem, 1.2vw, 1.15rem);
+  /* Slightly larger */
+  max-width: 65ch;
+  font-weight: 500;
+  /* BOLDER */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Buttons */
+button {
+  font-family: var(--font-body);
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+/* Base Utilities */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 5vw;
+}
+
+.section {
+  padding-top: var(--spacing-section);
+  padding-bottom: var(--spacing-section);
+  position: relative;
+}
+
+.text-accent {
+  color: var(--color-accent-primary);
+  font-style: italic;
+}
+
+::selection {
+  background: var(--color-accent-secondary);
+  color: #fff;
+}
