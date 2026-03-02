@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Mail, Linkedin, Twitter, Instagram, Youtube, Phone } from 'lucide-react';
 import './Footer.css';
 
@@ -21,25 +22,25 @@ const Footer = () => {
 
                     <div className="footer-links-group">
                         <h4 className="footer-title">Advisory Services</h4>
-                        <a href="#" className="footer-link">Model Portfolio</a>
-                        <a href="#" className="footer-link">Stock Advisory Services</a>
-                        <a href="#" className="footer-link">MissioN S.M.I.L.E</a>
-                        <a href="#" className="footer-link">Blog</a>
+                        <Link to="/model-portfolio" className="footer-link">Model Portfolio</Link>
+                        <Link to="/stock-advisory" className="footer-link">Stock Advisory Services</Link>
+                        <a href="https://missionsmile.smartsyncservices.com/learn" target="_blank" rel="noopener noreferrer" className="footer-link">MissioN S.M.I.L.E</a>
+                        <Link to="/blog" className="footer-link">Blog</Link>
                     </div>
 
                     <div className="footer-links-group">
                         <h4 className="footer-title">Company</h4>
-                        <a href="#" className="footer-link">About Us</a>
-                        <a href="#" className="footer-link">Our Team</a>
-                        <a href="#" className="footer-link">Client Testimonials</a>
-                        <a href="#" className="footer-link">Contact Us</a>
+                        <Link to="/about-us" className="footer-link">About Us</Link>
+                        <Link to="/our-team" className="footer-link">Our Team</Link>
+                        <Link to="/client-testimonials" className="footer-link">Client Testimonials</Link>
+                        <Link to="/contact-us" className="footer-link">Contact Us</Link>
                     </div>
 
                     <div className="footer-links-group">
                         <h4 className="footer-title">SEBI Compliance</h4>
-                        <a href="#" className="footer-link">Investor Charter</a>
-                        <a href="#" className="footer-link">Monthly Disclosures</a>
-                        <a href="#" className="footer-link">Complaint Redressal & SCORES</a>
+                        <Link to="/investor-charter" className="footer-link">Investor Charter</Link>
+                        <Link to="/monthly-disclosures" className="footer-link">Monthly Disclosures</Link>
+                        <Link to="/complaint-redressal" className="footer-link">Complaint Redressal & SCORES</Link>
                         <a href="mailto:ankit.k@smartsyncservices.com" className="footer-link highlight">ankit.k@smartsyncservices.com</a>
                     </div>
 
