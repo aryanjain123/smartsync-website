@@ -124,9 +124,9 @@ const ModelPortfolio = () => {
                                 <div style={{ borderRight: '1px solid rgba(26,26,26,0.1)', paddingRight: '2rem' }}>
                                     <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: 'var(--color-accent-primary)' }}>Retail</h3>
                                     <p style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>Investment Amount &lt; INR 12,00,000 per year</p>
-                                    <p style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '1rem' }}>INR 12,000 per year + 18% GST</p>
+                                    <p style={{ fontWeight: 600, fontSize: '1.1rem', marginBottom: '1rem' }}>INR 24,000 per year + 18% GST</p>
                                     <p style={{ fontSize: '0.9rem', marginBottom: '1.5rem' }}>Email and Call Support.</p>
-                                    <button className="btn-primary" style={{ padding: '0.5rem 1rem', fontSize: '0.8rem' }}>Sign Up</button>
+                                    <a href="https://razorpay.me/@smartsyncservices?amount=eh3jhVdIy2W8Wc3l4sF8AQ%3D%3D" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.5rem 1rem', fontSize: '0.8rem', display: 'inline-block', textDecoration: 'none' }}>Sign Up</a>
                                 </div>
                                 <div>
                                     <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: 'var(--color-accent-primary)' }}>HNI</h3>
