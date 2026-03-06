@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import './Hero.css';
 
@@ -47,10 +48,10 @@ const Hero = () => {
                         <a href="#services" className="btn-primary hero-btn">
                             Explore Our Services
                         </a>
-                        <a href="#about" className="btn-secondary hero-btn">
+                        <Link to="/about-us" className="btn-secondary hero-btn">
                             About SmartSync
                             <ArrowRight size={18} />
-                        </a>
+                        </Link>
                     </motion.div>
                 </div>
 

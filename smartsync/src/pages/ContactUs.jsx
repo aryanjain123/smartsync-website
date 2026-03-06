@@ -81,16 +81,16 @@ const ContactUs = () => {
 
                             <div style={{ marginBottom: '1.5rem' }}>
                                 <strong style={{ display: 'block', marginBottom: '0.25rem', fontFamily: 'var(--font-body)', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Phone</strong>
-                                <a href="tel:+919876543210" style={{ fontSize: '1.1rem', color: 'var(--color-accent-primary)', fontWeight: 500 }}>+91 98765 43210</a>
+                                <a href="tel:+919099956002" style={{ fontSize: '1.1rem', color: 'var(--color-accent-primary)', fontWeight: 500 }}>+91 90999 56002</a>
                             </div>
 
                             <div style={{ marginBottom: '1.5rem' }}>
                                 <strong style={{ display: 'block', marginBottom: '0.25rem', fontFamily: 'var(--font-body)', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Office Address</strong>
                                 <p style={{ fontSize: '1.05rem', lineHeight: 1.6 }}>
                                     SmartSync Services<br />
-                                    123 Financial District, Suite 400<br />
-                                    Mumbai, Maharashtra 400001<br />
-                                    India
+                                    106, Sreedhar Aurum,<br />
+                                    Beside Shivalay Parisar, Kudasan<br />
+                                    Gandhinagar, Gujarat, India - 382421
                                 </p>
                             </div>
                         </motion.div>
