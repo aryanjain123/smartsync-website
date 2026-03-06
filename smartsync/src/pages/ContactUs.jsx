@@ -64,7 +64,7 @@ const ContactUs = () => {
                         </p>
                     </motion.div>
 
-                    <div className="about-grid" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)', gap: '4rem', marginTop: '4rem' }}>
+                    <div className="about-grid responsive-grid-2-col">
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}

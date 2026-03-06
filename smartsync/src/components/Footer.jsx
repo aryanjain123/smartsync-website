@@ -10,7 +10,9 @@ const Footer = () => {
                 <div className="footer-grid">
 
                     <div className="footer-brand">
-                        <h2 className="footer-logo">SmartSync</h2>
+                        <Link to="/" className="footer-logo-link">
+                            <img src="/favicon.png" alt="SmartSync Logo" className="footer-logo-img" style={{ height: '50px', width: 'auto', marginBottom: '1rem' }} />
+                        </Link>
                         <p className="footer-slogan">Always in Sync with Your Investment Needs.</p>
                         <div className="social-links">
                             <a href="#" className="social-link"><Twitter size={20} /></a>

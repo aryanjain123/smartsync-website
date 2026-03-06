@@ -141,3 +141,19 @@ button {
   padding-top: 140px;
   /* Clears the fixed navbar height */
 }
+
+/* Responsive Grid Utility */
+.responsive-grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+  .responsive-grid-2-col {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+  }
+}

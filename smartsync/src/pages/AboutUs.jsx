@@ -19,7 +19,7 @@ const AboutUs = () => {
                         </p>
                     </motion.div>
 
-                    <div className="about-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', marginTop: '4rem' }}>
+                    <div className="about-grid responsive-grid-2-col">
                         <motion.div
                             className="about-block"
                             initial={{ opacity: 0, y: 30 }}
