@@ -40,9 +40,12 @@ const StockAdvisory = () => {
                             </a>
                         </motion.div>
 
-                        <div style={{ marginTop: '2rem', textAlign: 'center' }}>
-                            <a href="https://smartsyncservices.com/wp-content/uploads/2024/08/Guj-Thm-Final-repor-2-1.pdf" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-accent-primary)', fontWeight: 600, textDecoration: 'underline' }}>
-                                Click here to view / download a sample research report
+                        <div style={{ marginTop: '2rem', textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                            <a href="/Veranda Learning Report_25_08_2025_SSS.pdf" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-accent-primary)', fontWeight: 600, textDecoration: 'underline' }}>
+                                Click here to view / download sample research report — Veranda Learning
+                            </a>
+                            <a href="/Fineotex Chemicals Detailed report_SSS.pdf" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-accent-primary)', fontWeight: 600, textDecoration: 'underline' }}>
+                                Click here to view / download sample research report — Fineotex Chemicals
                             </a>
                         </div>
                     </div>
