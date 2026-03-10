@@ -14,7 +14,6 @@ const Navbar = () => {
       setScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
-    // Force scroll to top on route change
     window.scrollTo(0, 0);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [location.pathname]);
@@ -31,7 +30,7 @@ const Navbar = () => {
             <span className="nav-link">Advisory Services <ChevronDown size={14} className="dropdown-icon" /></span>
             <div className="dropdown-menu">
               <Link to="/model-portfolio" className="dropdown-link">Model Portfolio</Link>
-              <Link to="/stock-advisory-services" className="dropdown-link">Stock Advisory Services</Link>
+              <Link to="/flexi-cap-advisory-services" className="dropdown-link">Flexi-Cap Advisory Services</Link>
             </div>
           </div>
 
@@ -92,7 +91,7 @@ const Navbar = () => {
               <div className="mobile-nav-group">
                 <span className="mobile-nav-title">Advisory Services</span>
                 <Link to="/model-portfolio" onClick={() => setMobileMenuOpen(false)}>Model Portfolio</Link>
-                <Link to="/stock-advisory-services" onClick={() => setMobileMenuOpen(false)}>Stock Advisory Services</Link>
+                <Link to="/flexi-cap-advisory-services" onClick={() => setMobileMenuOpen(false)}>Flexi-Cap Advisory Services</Link>
               </div>
 
               <a href="https://missionsmile.smartsyncservices.com/learn" target="_blank" rel="noopener noreferrer" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>MissioN S.M.I.L.E</a>

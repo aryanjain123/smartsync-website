@@ -7,7 +7,7 @@ import AboutUs from './pages/AboutUs';
 import MissionSmile from './pages/MissionSmile';
 import ContactUs from './pages/ContactUs';
 import ModelPortfolio from './pages/ModelPortfolio';
-import StockAdvisory from './pages/StockAdvisory';
+import FlexiCapAdvisory from './pages/FlexiCapAdvisory';
 import OurTeam from './pages/OurTeam';
 import InvestorCharter from './pages/InvestorCharter';
 import ComplaintRedressal from './pages/ComplaintRedressal';
@@ -27,7 +27,7 @@ function App() {
         <Route path="/our-team" element={<OurTeam />} />
         <Route path="/client-testimonials" element={<ClientTestimonials />} />
         <Route path="/model-portfolio" element={<ModelPortfolio />} />
-        <Route path="/stock-advisory-services" element={<StockAdvisory />} />
+        <Route path="/flexi-cap-advisory-services" element={<FlexiCapAdvisory />} />
         <Route path="/mission-smile" element={<MissionSmile />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/investor-charter" element={<InvestorCharter />} />
