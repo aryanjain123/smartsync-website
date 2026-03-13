@@ -22,7 +22,12 @@ const Navbar = () => {
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <Link to="/" className="logo">
-          <img src="/favicon.png" alt="SmartSync Logo" className="logo-image" style={{ height: '40px', width: 'auto' }} />
+          <img
+            src="/favicon.png"
+            alt="SmartSync Logo"
+            className="logo-image"
+            style={{ height: '72px', width: 'auto', display: 'block' }}
+          />
         </Link>
 
         <nav className="desktop-nav">

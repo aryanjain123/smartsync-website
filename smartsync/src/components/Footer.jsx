@@ -11,7 +11,12 @@ const Footer = () => {
 
                     <div className="footer-brand">
                         <Link to="/" className="footer-logo-link">
-                            <img src="/favicon.png" alt="SmartSync Logo" className="footer-logo-img" style={{ height: '50px', width: 'auto', marginBottom: '1rem' }} />
+                            <img
+                                src="/favicon.png"
+                                alt="SmartSync Logo"
+                                className="footer-logo-img"
+                                style={{ height: '120px', width: 'auto', marginBottom: '1rem', display: 'block', imageRendering: 'crisp-edges' }}
+                            />
                         </Link>
                         <p className="footer-slogan">Always in Sync with Your Investment Needs.</p>
                         <div className="social-links">
@@ -25,7 +30,7 @@ const Footer = () => {
                     <div className="footer-links-group">
                         <h4 className="footer-title">Advisory Services</h4>
                         <Link to="/model-portfolio" className="footer-link">Model Portfolio</Link>
-                       <Link to="/flexi-cap-advisory-services" className="footer-link">Flexi-Cap Advisory Services</Link>
+                        <Link to="/flexi-cap-advisory-services" className="footer-link">Flexi-Cap Advisory Services</Link>
                         <a href="https://missionsmile.smartsyncservices.com/learn" target="_blank" rel="noopener noreferrer" className="footer-link">MissioN S.M.I.L.E</a>
                         <Link to="/blog" className="footer-link">Blog</Link>
                     </div>
