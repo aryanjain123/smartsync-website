@@ -102,9 +102,6 @@ const FlexiCapAdvisory = () => {
                             transition={{ duration: 0.6, delay: 0.25 }}
                             style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}
                         >
-                            <a href="/Veranda Learning Report_25_08_2025_SSS.pdf" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-accent-primary)', fontWeight: 600, textDecoration: 'underline', fontSize: '1rem' }}>
-                                Click here to view / download sample research report — Veranda Learning
-                            </a>
                             <a href="/Fineotex Chemicals Detailed report_SSS.pdf" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-accent-primary)', fontWeight: 600, textDecoration: 'underline', fontSize: '1rem' }}>
                                 Click here to view / download sample research report — Fineotex Chemicals
                             </a>
