@@ -1,41 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import { X, Phone, Mail } from 'lucide-react';
 
 const ModelPortfolio = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [formData, setFormData] = useState({ name: '', email: '', inquiryType: 'Inquiring about Model Portfolio', message: '' });
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState({ success: null, message: '' });
-
-    const handleInputChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-        setSubmitStatus({ success: null, message: '' });
-
-        try {
-            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/contact';
-            const response = await fetch(apiUrl, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
-            });
-            const data = await response.json();
-            if (response.ok) {
-                setSubmitStatus({ success: true, message: data.message || 'Thank you. We will contact you soon to schedule the call.' });
-                setFormData({ name: '', email: '', inquiryType: 'Inquiring about Model Portfolio', message: '' });
-                setTimeout(() => setIsModalOpen(false), 3000);
-            } else {
-                setSubmitStatus({ success: false, message: data.message || 'Failed to send inquiry.' });
-            }
-        } catch (error) {
-            setSubmitStatus({ success: false, message: 'Network error. Please try again later.' });
-        } finally {
-            setIsSubmitting(false);
-        }
-    };
     return (
         <main className="page-wrapper pt-32">
             <section className="section">
@@ -156,26 +124,39 @@ const ModelPortfolio = () => {
                             transition={{ duration: 0.3 }}
                             style={{ position: 'relative', background: 'var(--color-bg-base)', padding: '2.5rem', width: '100%', maxWidth: '500px', border: '1px solid rgba(26,26,26,0.1)', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}
                         >
-                            <button onClick={() => setIsModalOpen(false)} style={{ position: 'absolute', top: '1rem', right: '1rem', color: 'var(--color-text-secondary)' }}>
+                            <button onClick={() => setIsModalOpen(false)} style={{ position: 'absolute', top: '1rem', right: '1rem', color: 'var(--color-text-secondary)', background: 'none', border: 'none', cursor: 'pointer' }}>
                                 <X size={24} />
                             </button>
                             <h2 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', fontWeight: 600 }}>Schedule a Call</h2>
-                            <p style={{ color: 'var(--color-text-secondary)', marginBottom: '1.5rem', fontSize: '0.95rem' }}>Drop your details and we'll connect with you to discuss your portfolio.</p>
+                            <p style={{ color: 'var(--color-text-secondary)', marginBottom: '1.5rem', fontSize: '0.95rem' }}>Reach out to us through any of the options below.</p>
 
-                            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                                {submitStatus.success !== null && (
-                                    <div style={{ padding: '0.75rem', background: submitStatus.success ? 'rgba(76, 175, 80, 0.1)' : 'rgba(244, 67, 54, 0.1)', color: submitStatus.success ? '#2e7d32' : '#d32f2f', border: `1px solid ${submitStatus.success ? 'rgba(76, 175, 80, 0.3)' : 'rgba(244, 67, 54, 0.3)'}`, borderRadius: '4px', fontSize: '0.9rem' }}>
-                                        {submitStatus.message}
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                                <a href="tel:+919099956002" style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem 1.25rem', border: '1px solid rgba(26,26,26,0.15)', background: 'var(--color-bg-surface)', textDecoration: 'none', color: 'inherit', transition: 'border-color 0.2s' }}>
+                                    <Phone size={20} style={{ color: 'var(--color-accent-primary)', flexShrink: 0 }} />
+                                    <div>
+                                        <div style={{ fontWeight: 600, fontSize: '1rem' }}>Call Us</div>
+                                        <div style={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>+91 90999 56002</div>
                                     </div>
-                                )}
-                                <input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="Full Name" required style={{ padding: '0.875rem', border: '1px solid rgba(26,26,26,0.2)', background: 'transparent', font: 'inherit', outline: 'none' }} />
-                                <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="Email Address" required style={{ padding: '0.875rem', border: '1px solid rgba(26,26,26,0.2)', background: 'transparent', font: 'inherit', outline: 'none' }} />
-                                <input type="hidden" name="inquiryType" value="Inquiring about Model Portfolio" />
-                                <textarea name="message" value={formData.message} onChange={handleInputChange} placeholder="Additional details (Optional)" rows="3" style={{ padding: '0.875rem', border: '1px solid rgba(26,26,26,0.2)', background: 'transparent', font: 'inherit', outline: 'none', resize: 'vertical' }}></textarea>
-                                <button type="submit" className="btn-primary" disabled={isSubmitting} style={{ width: '100%', justifyContent: 'center', opacity: isSubmitting ? 0.7 : 1 }}>
-                                    {isSubmitting ? 'Submitting...' : 'Request Call'}
-                                </button>
-                            </form>
+                                </a>
+
+                                <a href="https://wa.me/919099956002" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem 1.25rem', border: '1px solid rgba(26,26,26,0.15)', background: 'var(--color-bg-surface)', textDecoration: 'none', color: 'inherit', transition: 'border-color 0.2s' }}>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" style={{ flexShrink: 0 }}>
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                    </svg>
+                                    <div>
+                                        <div style={{ fontWeight: 600, fontSize: '1rem' }}>WhatsApp</div>
+                                        <div style={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>+91 90999 56002</div>
+                                    </div>
+                                </a>
+
+                                <a href="mailto:akhilesh.p@smartsyncservices.com" style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem 1.25rem', border: '1px solid rgba(26,26,26,0.15)', background: 'var(--color-bg-surface)', textDecoration: 'none', color: 'inherit', transition: 'border-color 0.2s' }}>
+                                    <Mail size={20} style={{ color: 'var(--color-accent-primary)', flexShrink: 0 }} />
+                                    <div>
+                                        <div style={{ fontWeight: 600, fontSize: '1rem' }}>Email</div>
+                                        <div style={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>akhilesh.p@smartsyncservices.com</div>
+                                    </div>
+                                </a>
+                            </div>
                         </motion.div>
                     </div>
                 )}
