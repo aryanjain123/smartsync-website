@@ -35,7 +35,7 @@ const teamMembers = [
         name: "Krishna Satija",
         role: "Partner and Principal Officer",
         image: "/team/krishna.jpg",
-        bio: "A passionate investor with over 4 years of equity investment experience. Krishna Satija is a dynamic investment professional with a CA Finalist qualification, an M.A. in Economics, and a B.Com degree. With a strong foundation in finance, his sharp analytical skills and passion for monitoring market trends enable him to identify high-potential investment opportunities.",
+        bio: "A passionate investor with over 5 years of equity investment experience. Krishna Satija is a dynamic investment professional with a CA Finalist qualification, an M.A. in Economics, and a B.Com degree. With a strong foundation in finance, his sharp analytical skills and passion for monitoring market trends enable him to identify high-potential investment opportunities.",
     },
     {
         name: "Athar Syed",

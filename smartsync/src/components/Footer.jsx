@@ -20,10 +20,10 @@ const Footer = () => {
                         </Link>
                         <p className="footer-slogan">Always in Sync with Your Investment Needs.</p>
                         <div className="social-links">
-                            <a href="#" className="social-link"><Twitter size={20} /></a>
-                            <a href="#" className="social-link"><Linkedin size={20} /></a>
-                            <a href="#" className="social-link"><Youtube size={20} /></a>
-                            <a href="#" className="social-link"><Instagram size={20} /></a>
+                            <a href="https://x.com/SmartSyncServ" target="_blank" rel="noopener noreferrer" className="social-link"><Twitter size={20} /></a>
+                            <a href="https://www.linkedin.com/company/smart-sync-services/" target="_blank" rel="noopener noreferrer" className="social-link"><Linkedin size={20} /></a>
+                            <a href="https://youtube.com/@smartsyncservices7803?si=lfrhpEBN2e0uxzvy" target="_blank" rel="noopener noreferrer" className="social-link"><Youtube size={20} /></a>
+                            <a href="https://www.instagram.com/smartsyncserv?igsh=MTR1bjIyeDl3Y3Z0eA==" target="_blank" rel="noopener noreferrer" className="social-link"><Instagram size={20} /></a>
                         </div>
                     </div>
 
