@@ -44,12 +44,6 @@ const teamMembers = [
         bio: "Athar Syed leads the research division with a keen eye for macroeconomic trends and sector-specific analysis. With a strong academic background in finance and economics, he brings rigorous quantitative and qualitative research methodologies to drive data-backed investment decisions. His deep expertise in market dynamics and fundamental analysis forms the backbone of the firm's research capabilities.",
     },
     {
-        name: "Aryan Jain",
-        role: "Team Lead - Technology",
-        image: "/team/aryan.jpg",
-        bio: "Aryan Jain is the CTO and technology lead behind the firm’s AI-driven investment infrastructure. He specializes in building advanced AI/ML systems, including Retrieval-Augmented Generation (RAG) pipelines and agentic automation frameworks that power intelligent financial research and data-driven decision making. Aryan focuses on developing scalable systems that transform complex financial data into actionable insights, enabling analysts and advisors to work faster, smarter, and more efficiently.",
-    },
-    {
         name: "Sahil Shilimkar",
         role: "Senior AI/ML Developer",
         image: "/team/sahil.jpeg",
