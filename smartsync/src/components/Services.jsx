@@ -29,8 +29,8 @@ const servicesData = [
         title: "MissioN S.M.I.L.E",
         description: "150+ Hours of Engaging Video Content, Keenly Used by Nearly 7000 New and Seasoned Investors.",
         link: "Start Learning",
-        isExternal: true,
-        path: "https://missionsmile.smartsyncservices.com/learn"
+        isExternal: false,
+        path: "/mission-smile"
     }
 ];
 

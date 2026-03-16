@@ -31,7 +31,7 @@ const Footer = () => {
                         <h4 className="footer-title">Advisory Services</h4>
                         <Link to="/model-portfolio" className="footer-link">Model Portfolio</Link>
                         <Link to="/flexi-cap-advisory-services" className="footer-link">Flexi-Cap Advisory Services</Link>
-                        <a href="https://missionsmile.smartsyncservices.com/learn" target="_blank" rel="noopener noreferrer" className="footer-link">MissioN S.M.I.L.E</a>
+                        <Link to="/mission-smile" className="footer-link">MissioN S.M.I.L.E</Link>
                         <Link to="/blog" className="footer-link">Blog</Link>
                     </div>
 

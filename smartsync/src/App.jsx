@@ -29,6 +29,7 @@ function App() {
         <Route path="/model-portfolio" element={<ModelPortfolio />} />
         <Route path="/flexi-cap-advisory-services" element={<FlexiCapAdvisory />} />
         <Route path="/mission-smile" element={<MissionSmile />} />
+        <Route path="/learn" element={<MissionSmile />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/investor-charter" element={<InvestorCharter />} />
         <Route path="/monthly-disclosures" element={<MonthlyDisclosures />} />
