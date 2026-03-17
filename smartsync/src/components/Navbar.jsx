@@ -39,7 +39,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          <a href="https://missionsmile.smartsyncservices.com/learn" target="_blank" rel="noopener noreferrer" className="nav-link">MissioN S.M.I.L.E</a>
+          <Link to="/mission-smile" className="nav-link">MissioN S.M.I.L.E</Link>
           <Link to="/blog" className="nav-link">Blog</Link>
 
           <div className="nav-item has-dropdown">
@@ -99,7 +99,7 @@ const Navbar = () => {
                 <Link to="/flexi-cap-advisory-services" onClick={() => setMobileMenuOpen(false)}>Flexi-Cap Advisory Services</Link>
               </div>
 
-              <a href="https://missionsmile.smartsyncservices.com/learn" target="_blank" rel="noopener noreferrer" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>MissioN S.M.I.L.E</a>
+              <Link to="/mission-smile" className="mobile-nav-link" onClick={() => setMobileMenuOpen(false)}>MissioN S.M.I.L.E</Link>
               <Link to="/blog" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
 
               <div className="mobile-nav-group">
