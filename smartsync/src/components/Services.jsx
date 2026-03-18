@@ -30,7 +30,7 @@ const servicesData = [
         description: "150+ Hours of Engaging Video Content, Keenly Used by Nearly 7000 New and Seasoned Investors.",
         link: "Start Learning",
         isExternal: true,
-        path: "https://mission-smile.learnyst.com/learn/account/signin"
+        path: "https://missionsmile.smartsyncservices.com/learn"
     }
 ];
 
