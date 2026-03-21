@@ -94,6 +94,32 @@ const FlexiCapAdvisory = () => {
                             </p>
                         </motion.div>
 
+                        <motion.div
+                            className="about-block"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.23 }}
+                            style={{ background: 'var(--color-bg-surface)', padding: '3rem', border: '1px solid rgba(26, 26, 26, 0.1)' }}
+                        >
+                            <h2 style={{ fontSize: '1.6rem', marginBottom: '1.5rem', fontWeight: 600 }}>Fee Details</h2>
+
+                            <div>
+                                <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: 'var(--color-accent-primary)' }}>Retail</h3>
+                                <p style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>Investment Amount &lt; INR 30,00,000 per year</p>
+                                <div style={{ marginBottom: '1rem' }}>
+                                    <p style={{ fontWeight: 500, fontSize: '1rem', marginBottom: '0.35rem', color: 'var(--color-text-secondary)', textDecoration: 'line-through' }}>INR 48,000 per year + 18% GST</p>
+                                    <p style={{ fontWeight: 700, fontSize: '1.3rem', marginBottom: '0.25rem', color: 'var(--color-accent-primary)' }}>INR 24,000 per year + 18% GST</p>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', flexWrap: 'wrap' }}>
+                                        <span style={{ display: 'inline-block', padding: '0.35rem 0.85rem', background: 'linear-gradient(135deg, #0f766e, #0ea5a5)', color: '#ffffff', fontSize: '0.95rem', fontWeight: 800, letterSpacing: '0.06em', borderRadius: '999px', boxShadow: '0 6px 14px rgba(15, 118, 110, 0.25)' }}>50% OFF</span>
+                                        <span style={{ fontSize: '0.95rem', fontWeight: 800, color: '#c2410c', letterSpacing: '0.02em', textTransform: 'uppercase' }}>Discount ending soon! Hurry.</span>
+                                    </div>
+                                </div>
+                                <p style={{ fontSize: '0.9rem', marginBottom: '1.5rem' }}>Email and Call Support.</p>
+                                <a href="https://razorpay.me/@smartsyncservices?amount=eh3jhVdIy2W8Wc3l4sF8AQ%3D%3D" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: '0.5rem 1rem', fontSize: '0.8rem', display: 'inline-block', textDecoration: 'none' }}>Sign Up</a>
+                            </div>
+                        </motion.div>
+
                         {/* Sample Reports */}
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
